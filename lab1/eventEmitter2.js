@@ -24,4 +24,5 @@ task.off("greet",sayHi);
 task.emit("greet","Manager");
 task.emit("greet","Employee");
 console.log(task.listenerCount("greet"));
-task.removeAllListeners("greet");
+
+task.emit("greet","Aryan");
