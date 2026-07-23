@@ -1,41 +1,23 @@
-import { log } from "console"
-
-const f1=() =>{
-    console.log("f1 starts");
-    f2();
-    console.log("f1 running");
-    console.log("f1 end");
-    
-    
-    
+const f1 = () => {
+  console.log("f1 starts");
+  f2();
+  console.log("f1 running");
+  console.log("f1 end");
+};
+const f2 = () => {
+  console.log("f2 starts");
+  f3();
+  console.log("f2 running");
+  console.log("f2 ends");
+};
+const f3 = () => {
+  console.log("f3 starts");
+  console.log("f3 running");
+  console.log("f3 end");
+};
+function main() {
+  console.log("main");
+  f1();
+  console.log("end main");
 }
-const f2=() =>{
-    console.log("f2 starts");
-    f3();
-    console.log("f2 running");
-    console.log("f2 end");
-    
-    
-    
-}
-const f3=()=>{
-    console.log("f3 starts");
-    console.log("f3 running");
-    console.log("f3 end");
-    
-    
-
-    
-}
-
-function main(){
-    console.log("main starts");
-    f1();
-    console.log("main running");
-    
-    console.log("main ends");
-    
-    
-}
-
 main();
