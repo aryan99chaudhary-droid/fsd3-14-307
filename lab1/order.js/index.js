@@ -7,34 +7,38 @@ class OrderSystem extends EventEmitter {
     this.emit("orderPlaced", order);
   }
 }
+
 const orderObj = new OrderSystem();
+
 // sending email
 orderObj.on("orderPlaced", (order) => {
   console.log(`Sending confirmation email to ${order.email}`);
 });
+
 // inventory service
 orderObj.on("orderPlaced", (order) => {
-  order.forEach((item) => {
+  order.items.forEach((item) => {
     console.log(`Reducing stock of ${item.name} by ${item.qty}`);
   });
 });
 
-//shipping service
+// shipping service
 orderObj.on("orderPlaced", (order) => {
   console.log(`Creating shipping label for order # ${order.id}`);
 });
 
-//Logging
+// logging
 orderObj.on("orderPlaced", (order) => {
   console.log(`Logging order ${order.id} - total # ${order.total}`);
 });
 
-//Error
+// error handling
 orderObj.on("error", (err) => {
   console.log(`Error in order ${err}`);
 });
 
-OrderSystem.placeOrder({
+// ✅ Correct way to call
+orderObj.placeOrder({
   id: "ORD10001",
   customerName: "Ramesh Solanki",
   email: "ramesh.sol27@gmail.com",
