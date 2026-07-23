@@ -21,3 +21,11 @@ function main() {
   console.log("end main");
 }
 main();
+// js is a synchronous and single threaded .
+// in asynchronous we use event loop to manage the call-stack .
+//asynchronous call using timer 
+//1. set time out
+//2. set immediate
+//3. process.nextTick
+//4. setInterval
+
