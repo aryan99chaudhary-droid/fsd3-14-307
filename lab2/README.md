@@ -1,0 +1,1 @@
+await can be used with any promise in a sync function . That async function will also accessed by await keyWord .
