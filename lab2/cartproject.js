@@ -7,6 +7,22 @@ const getCart = async () => {
     return JSON.parse(data);
 };
 
+const saveCart = async (cart) => {
+    writeFileSync(FILE, JSON.stringify(cart, null, 2), "utf-8");
+};
+
+const addToCart = async (item) => {
+    const cart = await getCart();
+    cart.push(item);
+    await saveCart(cart);
+    if(isFoundIncart){
+        isFoundIncart.quantity += item.quantity;
+    }else
+
+console.table(cart);
+const total = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+console.log(`Total: $${total.toFixed(2)}`);
+
 
 
 const main = async () =>{
