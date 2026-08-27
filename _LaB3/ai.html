@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Agents Showcase</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #1a1a2e, #16213e, #0f3460);
+      margin: 0;
+      padding: 0;
+      color: #f5f5f5;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      color: #00f5d4;
+      text-shadow: 0 0 20px rgba(0,245,212,0.8);
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      color: #cddafd;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .agent-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .agent-card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+    }
+    .agent-card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 180deg, #00f5d4, #00bbf9, #9b5de5, #f15bb5, #00f5d4);
+      animation: rotate 8s linear infinite;
+      z-index: 0;
+      opacity: 0.15;
+    }
+    @keyframes rotate {
+      100% { transform: rotate(360deg); }
+    }
+    .agent-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 2px solid #00f5d4;
+      z-index: 1;
+      position: relative;
+    }
+    .agent-card-content {
+      padding: 20px;
+      z-index: 1;
+      position: relative;
+    }
+    .agent-card h2 {
+      margin: 0;
+      font-size: 1.5em;
+      color: #00bbf9;
+    }
+    .agent-card p {
+      margin-top: 10px;
+      font-size: 1em;
+      line-height: 1.5;
+      color: #e0e0e0;
+    }
+    .agent-card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0,0,0,0.6);
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    /* Smooth fade-in animation */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .agent-card {
+      animation: fadeInUp 1s ease forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🤖 Cute & Futuristic AI Agents</h1>
+    <p>Friendly companions with a robotic-tech charm</p>
+  </header>
+
+  <div class="container">
+    <div class="agent-list">
+      <div class="agent-card">
+        <img src="https://picsum.photos/seed/gpt4/400/200" alt="GPT-4">
+        <div class="agent-card-content">
+          <h2>OpenAI GPT-4</h2>
+          <p>A powerful language model with smooth reasoning and human-like responses, glowing with futuristic brilliance.</p>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://picsum.photos/seed/claude/400/200" alt="Claude">
+        <div class="agent-card-content">
+          <h2>Anthropic Claude</h2>
+          <p>A safe and helpful AI assistant, designed with a soft, approachable personality and advanced tech under the hood.</p>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://picsum.photos/seed/gemini/400/200" alt="Gemini">
+        <div class="agent-card-content">
+          <h2>Google Gemini</h2>
+          <p>A multimodal agent that blends text and visuals, offering a robotic yet smooth futuristic experience.</p>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://picsum.photos/seed/mistral/400/200" alt="Mistral">
+        <div class="agent-card-content">
+          <h2>Mistral AI</h2>
+          <p>Efficient open-weight models with a sleek, tech-inspired design, balancing performance and accessibility.</p>
+        </div>
+      </div>
+      <div class="agent-card">
+        <img src="https://picsum.photos/seed/copilot/400/200" alt="Copilot">
+        <div class="agent-card-content">
+          <h2>Microsoft Copilot</h2>
+          <p>Your friendly AI companion, blending productivity with a cute robotic charm to make tasks smoother.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 AI Agents Showcase | Futuristic & Cute Design ✨</p>
+  </footer>
+</body>
+</html>

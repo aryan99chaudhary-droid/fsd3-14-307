@@ -1,4 +1,6 @@
 import http from 'http';
+import {createReadStream} from 'fs';
+import {readFile} from 'fs/promises';
 
 const server = http.createServer((req, res) => {
     res.end('Hello, World!\n');
