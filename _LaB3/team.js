@@ -38,4 +38,4 @@ let teams = [
         if (index === -1) return false;
         teams.splice(index, 1);
         return true;
-    }
+    };

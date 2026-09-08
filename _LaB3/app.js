@@ -1,10 +1,16 @@
 import http from 'http';
+import * as team from "./teams.js";
 
-const server = http.createServer();
-server.on('request', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello, World!\n');
+const PORT = 5000;
+const server = http.createServer(req, res => {
+  if (req.url === '/' && req.method === 'GET') {
+    const teams = team.getAllTeams();
+    res.write(JSON.stringify(teams));
+  }else{
+    res.statusCode = 404;
+  }
+  res.end();
 });
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log('Server is running');
 });
