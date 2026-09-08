@@ -1,6 +1,5 @@
 import http from 'http';
-import * as team from "./
-teams.js";
+import * as team from "./teams.js";
 
 const PORT = 5000;
 const sendJason = (res,statusCode,data) => {
