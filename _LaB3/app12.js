@@ -1,6 +1,5 @@
 import http from "http";
 import * as teams from "./teams.js";
-// import { getAllTeams, addTeams, getTeamById} from "./teams.js";
 
 import { parse as parseUrl } from "url";
 
