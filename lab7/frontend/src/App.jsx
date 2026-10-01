@@ -31,12 +31,14 @@ function Book(props) {
 
 export default function App() {
   return (
-    <h1>Online Bookstore</h1>
+   <>
+   <h1>Book Store</h1>
     <div>
-      <Book book={b1} />
-      <Book book={b2} />
-      <Book book={b1} />
-      <Book book={b2} />
+      <Pen pen={p1} />
+      <Pen pen={p2} />
+      <Pen pen={p1} />
+      <Pen pen={p2} />
     </div>
+    </>
   );
 }
